@@ -5,4 +5,8 @@
     kubectl create namespace argocd
     for UI -> kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     For CLI -> kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml
+    Ingress -> kubectl port-forward svc/argocd-server -n argocd 8080:443
+    Password for Argoocd login -> kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+    export ARGOCD_OPTS='--port-forward-namespace argocd'
+    Login -> argocd login localhost:8080 --grpc-web --insecure
     
