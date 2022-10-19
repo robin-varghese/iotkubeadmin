@@ -13,5 +13,8 @@
             minikube start
             kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
             kubectl port-forward svc/argocd-server -n argocd 8080:443
-            
+    Create nginx based ingress for ArgoCD - > https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/
+        git pull https://github.com/robin-varghese/iotkubeadmin.git
+        kubectl apply -f argocd-ingres.yaml
+        
     
