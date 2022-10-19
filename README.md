@@ -16,5 +16,6 @@
     Create nginx based ingress for ArgoCD - > https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/
         git pull https://github.com/robin-varghese/iotkubeadmin.git
         kubectl apply -f argocd-ingres.yaml
-        
+        kubectl config set-context --current --namespace=argocd
+        kubectl get Ingress
     
