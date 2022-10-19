@@ -18,5 +18,5 @@
         kubectl apply -f argocd-ingres.yaml
         kubectl config set-context --current --namespace=argocd
         kubectl get Ingress
-        kubectl port-forward --address 0.0.0.0 service/<service-name> <real-port-access>:<service-port>
+        To make argocd accessable through intenet - > kubectl port-forward --address 0.0.0.0 service/argocd-server 8080:443
     
