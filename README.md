@@ -12,11 +12,12 @@
     After GCP VM restart Minikube service needs to be restarted-> 
             minikube start
             kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
-            kubectl port-forward svc/argocd-server -n argocd 8080:443
+            kubectl port-forward svc/argocd-server -n argocd 8080:443 (not required if this is getting exposed to internet)
     Create nginx based ingress for ArgoCD - > https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/
         git pull https://github.com/robin-varghese/iotkubeadmin.git
         kubectl apply -f argocd-ingres.yaml
         kubectl config set-context --current --namespace=argocd
         kubectl get Ingress
         To make argocd accessable through intenet - > kubectl port-forward --address 0.0.0.0 service/argocd-server 8080:443
+        https://34.170.84.37:8080/applications
     
