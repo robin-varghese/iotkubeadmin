@@ -22,3 +22,4 @@
         https://<Public IP>:8080/applications
  
  Install InfluxDB (No Kubernetes)   -> https://www.cyberithub.com/how-to-install-influxdb2-on-ubuntu-20-04-lts-step-by-step/
+ Install Grafana  (No Kubernetes) -> https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/   
