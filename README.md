@@ -20,4 +20,5 @@
         kubectl get Ingress
         To make argocd accessable through intenet - > kubectl port-forward --address 0.0.0.0 service/argocd-server 8080:443
         https://<Public IP>:8080/applications
-    
+ 
+ Install InfluxDB (No Kubernetes)   -> https://www.cyberithub.com/how-to-install-influxdb2-on-ubuntu-20-04-lts-step-by-step/
